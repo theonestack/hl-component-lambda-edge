@@ -2,3 +2,14 @@ test_metadata:
   type: config
   name: default
   description: default test with no config
+
+functions:
+  example:
+    runtime: nodejs14.x
+    code: |
+      exports.handler = (event, context, cb) => {
+        const cf = event.Records[0].cf;
+        const config = cf.config;
+        const request = cf.request;
+        cb(null, request);
+      }

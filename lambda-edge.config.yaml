@@ -1,1 +1,4 @@
 #default configuration
+
+managed_policies:
+  - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
