@@ -1,13 +1,12 @@
-# my-component CfHighlander Component
+# lambda-edge CfHighlander Component
 
-![cftest](https://github.com/theonestack/hl-component-my-component/actions/workflows/rspec.yaml/badge.svg)
+![cftest](https://github.com/theonestack/hl-component-lambda-edge/actions/workflows/rspec.yaml/badge.svg)
 
-**_NOTE:_**  Rename and replace my-component with the name of your component
 
 TODO: Add Description
 
 ```bash
-kurgan add my-component
+kurgan add lambda-edge
 ```
 
 ## Requirements

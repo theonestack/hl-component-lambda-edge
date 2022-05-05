@@ -1,6 +1,6 @@
 require 'yaml'
 
-describe 'compiled component my-component' do
+describe 'compiled component lambda-edge' do
   
   context 'cftest' do
     it 'compiles test' do
@@ -8,7 +8,7 @@ describe 'compiled component my-component' do
     end      
   end
   
-  let(:template) { YAML.load_file("#{File.dirname(__FILE__)}/../out/tests/default/my-component.compiled.yaml") }
+  let(:template) { YAML.load_file("#{File.dirname(__FILE__)}/../out/tests/default/lambda-edge.compiled.yaml") }
 
   context "Parameters" do
     let(:parameters) { template["Parameters"] }
