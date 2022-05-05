@@ -45,7 +45,7 @@ CloudFormation do
     end
 
     Output("#{function_name}Version") do
-      Value Ref(function_name)
+      Value Ref("#{function_name}Version")
       Export FnSub("${EnvironmentName}-#{external_parameters[:component_name]}-#{function_name}Version")
     end
 
