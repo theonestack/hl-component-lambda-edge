@@ -1,0 +1,16 @@
+test_metadata:
+  type: config
+  name: set_version
+  description: tests setting a custom version
+
+functions:
+  example:
+    runtime: nodejs14.x
+    version: 2
+    code: |
+      exports.handler = (event, context, cb) => {
+        const cf = event.Records[0].cf;
+        const config = cf.config;
+        const request = cf.request;
+        cb(null, request);
+      }

@@ -40,12 +40,14 @@ CloudFormation do
       Tags tags
     end
 
-    Lambda_Version("#{function_name}Version") do
+    version_name = "#{function_name}#{lambda_config.fetch('version','1')}"
+    Lambda_Version("#{version_name}Version") do
+      DeletionPolicy "Retain"
       FunctionName Ref(function_name)
     end
 
     Output("#{function_name}Version") do
-      Value Ref("#{function_name}Version")
+      Value Ref("#{version_name}Version")
       Export FnSub("${EnvironmentName}-#{external_parameters[:component_name]}-#{function_name}Version")
     end
 
